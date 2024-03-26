@@ -1,0 +1,17 @@
+/* RESET  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1500px;
+  max-width: 80%;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
