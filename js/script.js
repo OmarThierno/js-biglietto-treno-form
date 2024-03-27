@@ -25,7 +25,7 @@ calcBtnElem.addEventListener('click', function () {
   const userAgeValue = parseInt(userAgeElem.value); //number
   console.log('User Age:', userAgeValue);
 
-  if(userKmValue > 0 && userAgeValue > 0){
+  if(userKmValue > 0 && userAgeValue > 0 && userNameValue !== '') {
     const basePrice = priceAtKm * userKmValue; //number
     console.log('Base Price:' , basePrice)
 
@@ -55,9 +55,14 @@ calcBtnElem.addEventListener('click', function () {
     document.getElementById('num-carriage').innerHTML = randomCarriage;
 
   } else {
-    alert('Inserire numeri possitivi')
+    if (userNameValue === '') {
+      alert('Inserire un nome!')
+    } else if (userKmValue < 0 || userAgeValue < 0) {
+      alert('Attenzione: i numeri inseriti non possono essere negativi!')
+    }
+    else {
+      alert('Generic Error!')
+    }
   }
-
-  
 
 })
