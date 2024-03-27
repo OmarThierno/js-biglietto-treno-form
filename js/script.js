@@ -56,12 +56,15 @@ calcBtnElem.addEventListener('click', function () {
 
   } else {
     if (userNameValue === '') {
-      alert('Inserire un nome!')
+      alert('Inserire un nome!');
     } else if (userKmValue < 0 || userAgeValue < 0) {
-      alert('Attenzione: i numeri inseriti non possono essere negativi!')
-    }
-    else {
-      alert('Generic Error!')
+      alert('Attenzione: i numeri inseriti non possono essere negativi!');
+    } else if (isNaN(userKmValue)) {
+      alert('Attenzione: inserire quanti Km vuoi percorrere!')
+    } else if (isNaN(userAgeValue)) {
+      alert('Attenzione: inserire l\'età')
+    } else {
+      alert('Generic Error!');
     }
   }
 
